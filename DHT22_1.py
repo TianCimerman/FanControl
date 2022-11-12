@@ -18,11 +18,11 @@ while True:
     humidity_Outside=15
     temperature_Outside=20
     #Outside
-    #humidity_Outside, temperature_Outside = Adafruit_DHT.read_retry(DHT_SENSOR_Outside, DHT_PIN_Outside)
-    #if humidity_Outside is not None and temperature_Outside is not None:
-        #print("Temp_Out={0:0.1f}*C   Humidity_Out={1:0.1f}%".format(temperature_Outside, humidity_Outside))
-    #else:
-        #print("Failed to retrieve data from humidity sensor outside")
+    humidity_Outside, temperature_Outside = Adafruit_DHT.read_retry(DHT_SENSOR_Outside, DHT_PIN_Outside)
+    if humidity_Outside is not None and temperature_Outside is not None:
+        print("Temp_Out={0:0.1f}*C   Humidity_Out={1:0.1f}%".format(temperature_Outside, humidity_Outside))
+    else:
+        print("Failed to retrieve data from humidity sensor outside")
    
     #Inside
     humidity_Inside, temperature_Inside = Adafruit_DHT.read_retry(DHT_SENSOR_Inside, DHT_PIN_Inside)
