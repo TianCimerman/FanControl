@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        { 
+            "label": "RaspberryPiDeploy", 
+            "type": "shell", 
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "close": true
+            }, 
+            "windows": { 
+                "command": "scp  -i ~/.ssh/id_rsa DHT22_1.py pi@192.168.1.62:/home/pi; cmd /c start powershell -Command {ssh -t -i ~/.ssh/id_rsa pi@192.168.1.62 'python3 /home/pi/DHT22_1.py'}; sleep 10" 
+            }, 
+            "problemMatcher": [] 
+        }
+    ]
+}
